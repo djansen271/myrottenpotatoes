@@ -1,0 +1,7 @@
+%h2 Delete Movie
+
+= form_tag movie_path(@movie), :method => :delete
+  %h3 Do you actually want to delete #{@movie.title}?
+
+  = submit_tag 'Delete'
+  = link_to 'Cancel', movie_path(@movie)
